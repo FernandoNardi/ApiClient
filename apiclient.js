@@ -91,7 +91,6 @@ router.route('/clientes')
 router.route('/clientes/:cpf')
 .get(function(req, res){
 	var cpfGet = req.params.cpf.replace(/\./g, '').replace(/\-/g, '') + "";
-	console.log(cpfGet);
 	Cliente.find({ cpf : cpfGet }, function(err, cliente){
 		if(err){
 			res.json({ erro: true, mensagem: err.message, lista : null });	
@@ -155,4 +154,4 @@ app.use('/api', router);
 // ===============================================
 
 app.listen(port);
-console.log('Executando na porta ' + port);
+console.log('API executando na porta ' + port);

@@ -1,7 +1,5 @@
 // app/models/cliente.js
 
-
-//
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -10,9 +8,8 @@ var ClienteSchema = new Schema({
     nome: String,
     email: String,
     estadocivil: String,
-    telefones:[{
-		ddd: Number,
-		numero: Number
+    telefones:[{		
+		numero: String
 	}],
     logradouro: String,
     numero: Number,
